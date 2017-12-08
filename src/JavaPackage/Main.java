@@ -7,7 +7,7 @@ import ScalaPackage.MyPoint;
  */
 public class Main {
     public static void main(String args[]){
-        MyPoint p = new MyPoint(5, 5);
+        MyPoint p = new MyPoint(5242, 5);
         Debug.fields(p);
     }
 }

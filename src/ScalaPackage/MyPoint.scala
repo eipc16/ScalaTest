@@ -5,11 +5,5 @@ class MyPoint(xv: Int, yv: Int) extends Debug {
   var y: Int = yv
   var a: String = "test"
 
-  override def debugName(): Unit = println("Klasa: " + this.getClass.getSimpleName)
-  override def debugVars(): Unit = {
-    for(v <- this.getClass.getDeclaredFields) {
-      v.setAccessible(true)
-      println("Pole: " + v.getName + " => " + v.getType + ", " + v.get(this))
-    }
-  }
+  override def toString: String = a + " = " + x + ", " + y + "\n"
 }

@@ -12,7 +12,7 @@ class Debug {
             v.setAccessible(true);
             try {
                 System.out.println("Pole: " + v.getName()
-                + " => " + v.getType() + ", " + v.get(o));
+                + " => " + v.getType() + ", " + v.get(o).toString());
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }

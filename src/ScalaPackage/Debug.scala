@@ -6,9 +6,9 @@ package ScalaPackage
 trait Debug {
   def debugName(): Unit = println("Klasa: " + getClass.getSimpleName)
   def debugVars(): Unit = {
-    for(v <- getClass.getDeclaredFields) {
+    getClass.getDeclaredFields.foreach( v => List.apply(v).map(v => {
       v.setAccessible(true)
-      println("Pole: " + v.getName + " => " + v.getType + ", " + v.get(this))
-    }
+      "Pole: " + v.getName + " => " + v.getType + ", " + v.get(this)
+    }).foreach(s => println(s)))
   }
 }
